@@ -3,8 +3,18 @@
     <div class="toolbar">
       <div class="title">{{ title }}</div>
       <VueGroup v-model="optimizationEnabled">
-        <VueGroupButton :value="false">Unoptimized</VueGroupButton>
-        <VueGroupButton class="primary" icon-left="done" :value="true">
+        <VueGroupButton
+          :value="false"
+          :icon-left="!optimizationEnabled ? 'done' : null"
+          class="warning"
+        >
+          Unoptimized
+        </VueGroupButton>
+        <VueGroupButton
+          :value="true"
+          :icon-left="optimizationEnabled ? 'done' : null"
+          class="primary"
+        >
           {{ optimizedLabel || 'Optimized' }}
         </VueGroupButton>
       </VueGroup>

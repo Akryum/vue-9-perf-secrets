@@ -28,14 +28,13 @@
         class="split-count"
       />
       <VueButton
-        class="primary"
         icon-left="sync"
         @click="generateItems(count)"
       >
         Generate items
       </VueButton>
       <VueButton
-        class="primary"
+        class="accent"
         icon-left="cloud_download"
         @click="onClick()"
       >
