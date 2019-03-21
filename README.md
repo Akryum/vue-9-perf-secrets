@@ -1,5 +1,7 @@
 # vueconfus-perf-secrets
 
+[Slides](https://slides.com/akryum/vueconfus-2019)
+
 ## Project setup
 ```
 yarn install
