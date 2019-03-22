@@ -1,6 +1,5 @@
 <template>
   <div :style="{ opacity: number / 300 }">
-    <div>Message: {{ message }}</div>
     <div>{{ heavy() }}</div>
   </div>
 </template>
