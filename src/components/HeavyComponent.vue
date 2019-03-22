@@ -2,10 +2,11 @@
   <div
     class="heavy"
     :style="{
-      fontSize: `${20 + n / 9999999 * 20}px`,
+      width: `${size}px`,
+      height: `${size}px`,
     }"
   >
-    <pre>{{ heavy() }} <span>(n: {{ n }})</span></pre>
+    <pre>{{ heavy() }}</pre>
   </div>
 </template>
 
@@ -16,12 +17,19 @@ export default {
       default: 1000000,
     },
   },
+
+  computed: {
+    size () {
+      return 20 + this.n / 9999999 * 40
+    },
+  },
+
   methods: {
     heavy () {
       const n = this.n
       let result = 0
       for (let i = 0; i < n; i++) {
-        result += Math.sqrt(Math.cos(Math.sin(Math.random() * 100)))
+        result += Math.tan(Math.sqrt(Math.cos(Math.sin(Math.random() * 100))))
       }
       return result
     },
@@ -31,9 +39,10 @@ export default {
 
 <style lang="stylus" scoped>
 .heavy
+  background #6806c1
+  border black 10px solid
+  border-radius 50%
   >>>
     pre
-      margin 0
-    span
-      opacity .75
+      opacity 0
 </style>

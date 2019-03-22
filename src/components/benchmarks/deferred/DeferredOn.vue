@@ -3,7 +3,7 @@
     <h2>I'm an heavy page</h2>
 
     <template v-if="defer(2)">
-      <Heavy v-for="n in 10" :key="n"/>
+      <Heavy v-for="n in 8" :key="n"/>
     </template>
 
     <Heavy v-if="defer(3)" class="super-heavy" :n="9999999"/>
