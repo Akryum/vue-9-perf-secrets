@@ -79,4 +79,5 @@ export default {
 .content
   flex 1
   background black
+  overflow hidden
 </style>

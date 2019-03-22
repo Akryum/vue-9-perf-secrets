@@ -69,7 +69,6 @@ export default {
 
 <style lang="stylus" scoped>
 .grid
-  overflow hidden
   margin 24px auto
   max-width (20 * 36px)
   >>> .cell
