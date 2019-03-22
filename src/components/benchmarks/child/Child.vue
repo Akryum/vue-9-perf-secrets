@@ -5,21 +5,25 @@
     </template>
 
     <template #on>
-      <ChildOn
-        v-for="(n, index) of list"
-        :key="index"
-        :message="n"
-        :n="100000"
-      />
+      <div class="grid">
+        <ChildOn
+          v-for="(n, index) of list"
+          :key="index"
+          :number="n"
+          class="cell"
+        />
+      </div>
     </template>
 
     <template #off>
-      <ChildOff
-        v-for="(n, index) of list"
-        :key="index"
-        :message="n"
-        :n="100000"
-      />
+      <div class="grid">
+        <ChildOff
+          v-for="(n, index) of list"
+          :key="index"
+          :number="n"
+          class="cell"
+        />
+      </div>
     </template>
   </Benchmark>
 </template>
@@ -64,3 +68,19 @@ export default {
   },
 }
 </script>
+
+<style lang="stylus" scoped>
+.grid
+  overflow hidden
+  margin 24px auto
+  max-width (20 * 36px)
+
+.cell
+  float left
+  width 32px
+  height @width
+  margin 2px
+  color transparent
+  background #42b983
+  border-radius 50%
+</style>

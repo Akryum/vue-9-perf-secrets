@@ -1,5 +1,5 @@
 <template>
-  <div>{{ result }}</div>
+  <div :style="{ opacity: start / 300 }">{{ result }}</div>
 </template>
 
 <script>

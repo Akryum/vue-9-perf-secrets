@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :style="{ opacity: number / 300 }">
     <div>Message: {{ message }}</div>
     <div>{{ heavy() }}</div>
   </div>
@@ -7,10 +7,10 @@
 
 <script>
 export default {
-  props: ['message', 'n'],
+  props: ['number'],
   methods: {
     heavy () {
-      const n = this.n
+      const n = 100000
       let result = 0
       for (let i = 0; i < n; i++) {
         result += Math.sqrt(Math.cos(Math.sin(42)))
