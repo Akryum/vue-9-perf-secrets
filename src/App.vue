@@ -32,7 +32,6 @@ body,
   flex auto 0 0
   background #2c3e50
   a
-    font-weight bold
     margin-right 24px
     &.router-link-active
       color white
