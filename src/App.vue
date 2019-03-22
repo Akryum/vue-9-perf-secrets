@@ -11,7 +11,7 @@
       <router-link :to="{ name: 'bench-hide' }">Reused Dom</router-link>
       <router-link :to="{ name: 'bench-keep-alive' }">Keep alive</router-link>
       <router-link :to="{ name: 'bench-deferred' }">Deferred features</router-link>
-      <router-link :to="{ name: 'bench-fetch-items' }">Fetch items</router-link>
+      <router-link :to="{ name: 'bench-fetch-items' }">Vuex demo</router-link>
     </div>
     <router-view class="route"/>
   </div>

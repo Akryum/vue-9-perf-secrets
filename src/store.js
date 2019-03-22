@@ -27,6 +27,7 @@ const store = new Vuex.Store({
       items: [],
       loading: false,
       progress: 0,
+      generatedCount: 0,
     }
   },
   getters: {
@@ -48,13 +49,17 @@ const store = new Vuex.Store({
     voteItem (state, item) {
       item.vote++
     },
+    generatedCount (state, value) {
+      state.generatedCount = value
+    },
   },
   actions: {
-    generateItems (context, count) {
+    generateItems ({ commit }, count) {
       items = generate(count)
+      commit('generatedCount', count)
     },
 
-    fetchItems ({ commit }, { splitCount, split, optimize }) {
+    commitItems ({ commit }, { splitCount, split, optimize }) {
       commit('clearItems')
       commit('loading', true)
       requestAnimationFrame(async resolve => {

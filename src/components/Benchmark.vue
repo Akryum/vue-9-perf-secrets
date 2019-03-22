@@ -1,7 +1,11 @@
 <template>
   <div class="benchmark">
     <div class="toolbar">
-      <div class="title">{{ title }}</div>
+      <div class="title">
+        <div class="title-text">{{ title }}</div>
+        <slot name="title"/>
+      </div>
+
       <VueGroup v-model="optimizationEnabled">
         <VueGroupButton
           :value="false"
@@ -51,16 +55,23 @@ export default {
 
 .toolbar
   flex auto 0 0
-  display flex
-  align-items center
   padding 15px 30px
   > *:not(:last-child)
     margin-right 12px
 
+.toolbar,
 .title
+  display flex
+  align-items center
+
+.title
+  flex 1
+  > *:not(:last-child)
+    margin-right 32px
+
+.title-text
   font-size 32px
   font-weight lighter
-  flex 1
   white-space nowrap
   overflow hidden
   text-overflow ellipsis
