@@ -102,12 +102,17 @@
         v-if="!loading && scrollVisible"
         class="items no-v"
       >
-        <FetchItemViewFunctional
-          v-for="item of items"
-          :key="item.id"
-          :item="item"
-          @vote="voteItem(item)"
-        />
+        <template v-if="itemCount <= 1000">
+          <FetchItemViewFunctional
+            v-for="item of items"
+            :key="item.id"
+            :item="item"
+            @vote="voteItem(item)"
+          />
+        </template>
+        <div v-else class="disabled-list">
+          Disabled to prevent crash
+        </div>
       </div>
     </template>
   </Benchmark>
@@ -191,4 +196,12 @@ export default {
   padding 12px
   .vue-ui-grid
     align-content start
+
+.disabled-list
+  height 100%
+  display flex
+  align-items center
+  justify-content center
+  color #e83030
+  font-size 24px
 </style>
