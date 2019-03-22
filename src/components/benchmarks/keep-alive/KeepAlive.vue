@@ -83,6 +83,7 @@ export default {
       flex-direction column
       align-items center
       padding 40px
+      box-sizing border-box
 
       h2:not(:last-child)
         margin-bottom 24px

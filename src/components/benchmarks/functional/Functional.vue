@@ -6,6 +6,7 @@
 
     <template #on>
       <div class="grid">
+        <!-- We force re-creating the component using `key` -->
         <FunctionalOn
           v-for="n of list"
           :key="uid++"
@@ -16,6 +17,7 @@
 
     <template #off>
       <div class="grid">
+        <!-- We force re-creating the component using `key` -->
         <FunctionalOff
           v-for="n of list"
           :key="uid++"
@@ -50,9 +52,12 @@ export default {
   },
 
   created () {
-    this.count = 1000
+    this.count = 800
+
     // Force re-creating the components with a unique id
     this.uid = 0
+
+    this.generate()
   },
 
   methods: {
@@ -72,15 +77,17 @@ export default {
 .grid
   overflow hidden
   margin 24px auto
-  max-width (50 * 24px)
+  max-width (32 * 28px)
   >>> .cell
     float left
     width 24px
     height @width
+    margin 2px
     .on, .off
       width 100%
       height @width
       color transparent
+      border-radius 50%
     .on
       background #2c3e50
     .off

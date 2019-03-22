@@ -1,5 +1,7 @@
 <template>
   <div class="deferred-on">
+    <VueIcon icon="fitness_center" class="gigantic"/>
+
     <h2>I'm an heavy page</h2>
 
     <template v-if="defer(2)">

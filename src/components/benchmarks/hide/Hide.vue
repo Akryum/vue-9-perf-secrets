@@ -51,6 +51,7 @@ export default {
 
   created () {
     this.count = 200
+    this.generate()
   },
 
   methods: {
@@ -70,17 +71,26 @@ export default {
 .grid
   overflow hidden
   margin 24px auto
-  max-width (10 * 24px)
+  max-width (20 * 36px)
   >>> .cell
     float left
-    width 24px
+    width 32px
     height @width
+    margin 2px
     .on, .off
       width 100%
       height @width
-      color transparent
+      box-sizing border-box
+      border-radius 50%
+      .heavy
+        border none
+        box-shadow 0 0 5px black
+        opacity .5
+        margin 0
+        width 100% !important
+        height 100% !important
     .on
-      background #2c3e50
+      background grey
     .off
-      background #4f6f7f
+      background black
 </style>

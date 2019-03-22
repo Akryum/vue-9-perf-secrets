@@ -44,5 +44,6 @@ export default {
   border-radius 50%
   >>>
     pre
+      margin 0
       opacity 0
 </style>

@@ -49,6 +49,7 @@ export default {
 
   created () {
     this.count = 300
+    this.generate()
   },
 
   methods: {
