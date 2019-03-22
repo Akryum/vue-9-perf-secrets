@@ -9,9 +9,8 @@ export default {
     base () {
       return 42
     },
-    result () {
-      const base = this.base
-      let result = this.start
+    result ({ base, start }) {
+      let result = start
       for (let i = 0; i < 1000; i++) {
         result += Math.sqrt(Math.cos(Math.sin(base))) + base * base + base + base * 2 + base * 3
       }
