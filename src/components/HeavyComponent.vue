@@ -40,7 +40,7 @@ export default {
 <style lang="stylus" scoped>
 .heavy
   background lighten(#6806c1, 30%)
-  border black 10px solid
+  border black 5px solid
   border-radius 50%
   >>>
     pre
