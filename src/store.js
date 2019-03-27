@@ -54,8 +54,8 @@ const store = new Vuex.Store({
     },
   },
   actions: {
-    generateItems ({ commit }, count) {
-      items = generate(count)
+    async generateItems ({ commit }, count) {
+      items = await generate(count)
       commit('generatedCount', count)
     },
 

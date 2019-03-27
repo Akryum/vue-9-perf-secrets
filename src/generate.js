@@ -1,6 +1,5 @@
-import faker from 'faker'
-
-export function generate (count) {
+export async function generate (count) {
+  const faker = (await import(/* webpackChunkName: 'faker' */ 'faker')).default
   const items = []
   for (let i = 0; i < count; i++) {
     // const posts = []
