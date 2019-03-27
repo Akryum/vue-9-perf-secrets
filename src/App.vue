@@ -5,9 +5,9 @@
       <!-- Omitted, not enough performance gains in this example -->
       <!-- Need to find/write a better benchmark for this -->
       <!-- <router-link :to="{ name: 'bench-static' }">Static</router-link> -->
+      <router-link :to="{ name: 'bench-functional' }">Functional components</router-link>
       <router-link :to="{ name: 'bench-child' }">Child splitting</router-link>
       <router-link :to="{ name: 'bench-local-var' }">Local var</router-link>
-      <router-link :to="{ name: 'bench-functional' }">Functional components</router-link>
       <router-link :to="{ name: 'bench-hide' }">Reused Dom</router-link>
       <router-link :to="{ name: 'bench-keep-alive' }">Keep alive</router-link>
       <router-link :to="{ name: 'bench-deferred' }">Deferred features</router-link>
